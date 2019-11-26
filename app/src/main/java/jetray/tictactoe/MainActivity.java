@@ -1,23 +1,20 @@
 package jetray.tictactoe;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.animation.AlphaAnimation;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import android.view.View;
-import android.widget.ArrayAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//apply the animation ( fade In ) to your LAyout
 
         if (getIntent().getBooleanExtra("EXIT", false)) {
             finish();

@@ -1,17 +1,11 @@
 package jetray.tictactoe;
 
 import android.app.Dialog;
-import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -588,15 +582,11 @@ public class Afterstart extends AppCompatActivity {
         final Dialog dialog = new Dialog(Afterstart.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_layout);
-//        TextView playerOneScore = dialog.findViewById(R.id.player_one_score);
-//        TextView playerTwoScore = dialog.findViewById(R.id.player_two_score);
         TextView titleText = dialog.findViewById(R.id.title_text);
         dialog.setCancelable(false);
         dialog.show();
 
         titleText.setText(whoWon);
-//        playerOneScore.setText(whoWon+" Score -> "+scoreWon);
-//        playerTwoScore.setText(whoLose+"Score -> "+scoreLose);
 
         Button resetButton = dialog.findViewById(R.id.reset_button);
         Button playAgainButton = dialog.findViewById(R.id.play_again_button);
@@ -789,14 +779,6 @@ public class Afterstart extends AppCompatActivity {
 
     }
 
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        return true;
-//    }
-
     private void showExitDialog() {
         final Dialog dialog = new Dialog(Afterstart.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -829,39 +811,6 @@ public class Afterstart extends AppCompatActivity {
         showExitDialog();
     }
 
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.exit) {
-//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//            intent.putExtra("EXIT", true);
-//            doreset();
-//            startActivity(intent);
-//        }
-//
-//        if (id == R.id.daynightmode) {
-//
-//            if (night % 2 == 0) {
-//                View view = this.getWindow().getDecorView();
-//                view.setBackgroundColor(Color.parseColor("#000000"));
-//                item.setTitle("Day Mode");
-//            } else {
-//                View view = this.getWindow().getDecorView();
-//                view.setBackgroundColor(Color.parseColor("#FFFFFF"));
-//                item.setTitle("Night Mode");
-//            }
-//            night++;
-//        }
-//
-//
-//        return super.onOptionsItemSelected(item);
-//    }
 }
 
 
